@@ -1,0 +1,15 @@
+body {
+    overflow: hidden;
+}
+
+.anchor {
+    position: absolute;
+}
+
+.board {
+    position : relative;
+}
+
+.pieces {
+    position : relative;
+}
