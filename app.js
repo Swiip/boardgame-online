@@ -1,5 +1,5 @@
-var express = require('express'),
-    socketio = require('socket.io');
+var express = require('express')/*,
+    socketio = require('socket.io')*/;
 
 
 var app = express.createServer();
@@ -11,4 +11,4 @@ app.get('/', function(req, res){
     //res.render('index33', { layout: false });
 });
 
-app.listen(process.env.C9_PORT);
+app.listen(process.env.C9_PORT || process.env.VMC_APP_PORT || 3000);
