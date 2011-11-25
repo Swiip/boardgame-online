@@ -1,5 +1,5 @@
-var express = require('express')/*,
-    socketio = require('socket.io')*/;
+var express = require('express'),
+    socketio = require('socket.io');
 
 
 var app = express.createServer();
