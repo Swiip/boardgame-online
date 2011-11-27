@@ -4,11 +4,22 @@ var express = require('express'),
 
 var app = express.createServer();
 
-app.use(express["static"](__dirname + '/public'));
+//app.use(express.logger());
 
-app.get('/', function(req, res){
-    //res.send('Hello World');
-    //res.render('index33', { layout: false });
+app.get('/', function(req, res, next){
+    req.url = "/index.html";
+    next();
 });
 
+app.use(express["static"](__dirname + '/public'));
+
 app.listen(process.env.C9_PORT || process.env.VMC_APP_PORT || 3000);
+
+var io = socketio.listen(app);
+
+io.sockets.on("connection", function (socket) {
+    socket.on("move", function (message) {
+        console.log(message);
+        socket.broadcast.emit("move", message);
+    });
+});

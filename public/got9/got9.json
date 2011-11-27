@@ -11,6 +11,7 @@
     },
     "pieces": {
         "test": {
+        	"id": "test",
             "src": "security.png",
             "x": 100,
             "y": 100
