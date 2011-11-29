@@ -17,6 +17,16 @@ app.listen(process.env.C9_PORT || process.env.VMC_APP_PORT || 3000);
 
 var io = socketio.listen(app);
 
+if(process.env.VMC_APP_PORT) {
+    io.set('transports', [
+        //'websocket',
+        //'flashsocket',
+        //'htmlfile',
+        'xhr-polling',
+        'jsonp-polling'
+    ]);
+}
+
 io.sockets.on("connection", function (socket) {
     socket.on("move", function (message) {
         console.log(message);

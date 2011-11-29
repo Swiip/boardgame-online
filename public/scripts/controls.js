@@ -2,11 +2,15 @@ define([ "jquery", "jquery-ui", "socket.io.min" ], function($) {
     var socket = io.connect();
 
     return {
-        init : function() {
+        init : function(callback) {
             var controls = require("controls");
             controls.board();
             controls.pieces();
             socket.on("move", controls.remoteMove);
+            
+            if(callback) {
+            	callback();
+            }
         },
 
         mousedownEvent : null,
@@ -34,11 +38,11 @@ define([ "jquery", "jquery-ui", "socket.io.min" ], function($) {
         pieces: function() {
             $(".pieces").draggable({
                 drag : function(event, ui) {
-                    console.log(event, ui, ui.helper.context);
+                    //console.log("position : position", ui.helper.css("position"), ", left", ui.helper.css("left"), ", top", ui.helper.css("top"));
                     socket.emit("move", {
                         id : ui.helper.get(0).functionalId,
-                        top : ui.offset.top,
-                        left : ui.offset.left
+                        top : ui.position.top,
+                        left : ui.position.left
                     });
                 }
             }).mousedown(function() {

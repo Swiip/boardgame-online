@@ -2,6 +2,16 @@
     "name": "Game of Thrones for 9 players",
     "description": "A Feast for Crows Expansion",
     "version": "0.0.1",
+    "players" {
+    	"stark": {
+    		"name": "Stark",
+    		"color": "ffffff"
+    	},
+    	"lannister": {
+    		"name": "Lannister",
+    		"color": "ff0000"
+    	}
+    },
     "board": {
         "main": {
             "src": "map.jpg",
@@ -11,7 +21,6 @@
     },
     "pieces": {
         "test": {
-        	"id": "test",
             "src": "security.png",
             "x": 100,
             "y": 100
