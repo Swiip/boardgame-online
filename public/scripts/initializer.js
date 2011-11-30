@@ -1,9 +1,11 @@
-define([ "jquery", "jquery-ui" ], function($) {
+define([ "jquery", "text!templates/player.html", "jqueryui/dialog", "jsrender" ], function($, player) {
+	console.log(player, $.render);
     return {
         start : function(callback) {
-            if(callback) {
-            	callback();
-            }
+            $(player).dialog({
+            	modal: true,
+            	close: callback
+            });
         }
     };
 });
