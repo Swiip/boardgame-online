@@ -28,8 +28,14 @@ if(process.env.VMC_APP_PORT) {
 }
 
 io.sockets.on("connection", function (socket) {
+	var pieces = {};
+	
+	socket.on("init", function() {
+		socket.emit("init", pieces);
+	});
+	
     socket.on("move", function (message) {
-        console.log(message);
+        pieces[message.id] = message;
         socket.broadcast.emit("move", message);
     });
 });

@@ -2,7 +2,7 @@
     "name": "Game of Thrones for 9 players",
     "description": "A Feast for Crows Expansion",
     "version": "0.0.1",
-    "players" {
+    "players": {
     	"stark": {
     		"name": "Stark",
     		"color": "ffffff"

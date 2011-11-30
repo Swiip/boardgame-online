@@ -1,4 +1,4 @@
-define([ "jquery", "jquery-ui", "socket.io.min" ], function($) {
+define([ "jquery", "jqueryui/draggable", "socketio" ], function($) {
     var socket = io.connect();
 
     return {
