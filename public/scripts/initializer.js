@@ -1,8 +1,7 @@
-define([ "jquery", "text!templates/player.html", "jqueryui/dialog", "jsrender" ], function($, player) {
-	console.log(player, $.render);
+define([ "jquery", "loader", "text!templates/players.html", "jqueryui/dialog", "jsrender" ], function($, loader, players) {
     return {
         start : function(callback) {
-            $(player).dialog({
+            $($.render(loader.players, players)).dialog({
             	modal: true,
             	close: callback
             });
