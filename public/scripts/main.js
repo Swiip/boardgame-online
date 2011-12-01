@@ -2,7 +2,8 @@ require({
 	paths: {
 		jquery: "libs/jquery-1.7.1",
 		jqueryui: "libs/jqueryui-1.8.16/jqueryui",
-		socketio: "libs/socketio-0.8.7/socket.io.min",
+		underscore: "libs/underscore-1.2.2",
+		socketio: "libs/socketio-0.8.7/socket.io",
 		text: "libs/text-1.0.2",
 		jsrender: "libs/jsrender-1.0pre",
 		templates: "../templates"

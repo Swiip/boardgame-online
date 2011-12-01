@@ -1,1 +1,13 @@
-aa<div class="titi">aa{{=lannister.name}}</div>aa
+<div>
+	<table>
+		<tr>
+			<% _.each(players, function(value, key) { %>
+				<td class="player">
+					<img src="<%= game %>/<%= value.logo %>">
+					<%= value.name %>
+					<div class="data"><%= key %></div>
+				</td>
+			<% }); %>
+		</tr>
+	</table>
+</div>

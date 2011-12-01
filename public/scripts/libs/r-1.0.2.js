@@ -4401,7 +4401,11 @@ function ast_squeeze_more(ast) {
 
 exports.ast_squeeze_more = ast_squeeze_more;
 
-});define('uglifyjs/process', ["require", "exports", "module", "./parse-js", "./squeeze-more"], function(require, exports, module) {
+});
+
+define('uglifyjs/process',
+		
+		[], function(require, exports, module) {
 
 /***********************************************************************
 

@@ -13,3 +13,7 @@ body {
 .pieces {
     position : relative;
 }
+
+.data {
+	display : none;
+}
