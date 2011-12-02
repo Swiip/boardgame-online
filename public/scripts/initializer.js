@@ -8,6 +8,7 @@ define([ "jquery", "underscore", "loader", "text!templates/players.html", "jquer
             		$(".player", dialog).click(function(event) {
             			var playerKey = $(".data", $(event.target).closest("td")).html();
             			loader.player = loader.players[playerKey];
+            			loader.player.id = playerKey;
             			dialog.dialog("close");
             		});
             	},

@@ -38,4 +38,9 @@ io.sockets.on("connection", function (socket) {
         pieces[message.id] = message;
         socket.broadcast.emit("move", message);
     });
+    
+    socket.on("face", function (message) {
+        pieces[message.id] = message;
+        socket.broadcast.emit("face", message);
+    });
 });

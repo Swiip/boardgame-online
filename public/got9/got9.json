@@ -5,12 +5,12 @@
     "players": {
     	"stark" : {
     		"name": "Stark",
-    		"color": "ffffff",
+    		"color": "#ffffff",
     		"logo": "back_card_stark.png"
     	},
     	"lannister" : {
     		"name": "Lannister",
-    		"color": "ff0000",
+    		"color": "#ff0000",
     		"logo": "back_card_lannister.png"
     	}
     },
@@ -26,6 +26,13 @@
             "src": "security.png",
             "x": 100,
             "y": 100
+        },
+        "card-test": {
+        	"owner": "stark",
+        	"src-down": "back_card_stark.png",
+        	"src-up": "back_card_lannister.png",
+        	"x": 500,
+            "y": 200
         }
     }
 }
